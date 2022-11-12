@@ -33,7 +33,7 @@ async def load_cogs():
 	for f in os.listdir("./cogs"):
 		if f.endswith(".py"):
 			if f != "__init__.py":
-				await bot.load_extension("cogs." + f[:-3])
+				await bot.load_extension("." + f[:-3])
    
 async def main():
 	await load_cogs()
