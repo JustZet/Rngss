@@ -30,7 +30,7 @@ async def hello(interaction: discord.Interaction):
     await interaction.response.send_message(f'Hi, {interaction.user.mention}')
  
 async def load_cogs():
-	for f in os.listdir("/lib/cogs"):
+	for f in os.listdir("./cogs"):
 		if f.endswith(".py"):
 			if f != "__init__.py":
 				await bot.load_extension("cogs." + f[:-3])
